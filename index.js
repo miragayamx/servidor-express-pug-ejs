@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(`${__dirname}/public`));
 
 app.set("views", "./views");
-app.set("view engine", "pug");
+app.set("view engine", "ejs");
 
 app.use("/api", productRouter);
 app.use("/productos", vistaRouter);
