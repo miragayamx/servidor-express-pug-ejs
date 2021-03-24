@@ -50,7 +50,7 @@ router.post('/productos/guardar/', upload.single('thumbnail'), (req, res) => {
 		price: req.body.price,
 		thumbnail: '/uploads/'+req.file.filename
 	});
-	res.status(201).json(newProducto);
+	res.render("ingreso-producto");
 });
 //PUT
 router.put('/productos/actualizar/:id', productExists, upload.single('thumbnail'), (req, res) => {
